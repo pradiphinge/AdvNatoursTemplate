@@ -1,0 +1,69 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-dark-grey;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  margin-bottom: 6rem;
+
+  &--main-text {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 4rem;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  &--sub-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include clip-color;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  // letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
